@@ -1,0 +1,12 @@
+```public Class Person {
+    private String surname;
+    private String firstName;
+    
+    public String getFullName() {
+        //the fullName =  firstName + surname;
+        return firstName+surname;
+    }
+}
+```
+//the fullName =  firstName + surname;
+这段注释就是多余的注释

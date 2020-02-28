@@ -1,0 +1,23 @@
+```
+object QueryFieldBuilder {
+  def build(fieldName: String): Array[String] = {
+    if (fieldName.equalsIgnoreCase("order")
+      || fieldName.equalsIgnoreCase("revenue"))
+      Array("online", "instore").map(_ + fieldName.toLowerCase)
+    else
+      Array(fieldName.toLowerCase)
+  
+ object FiledValueFormatter {
+   def format(filedName: String, value: String): String = {
+     if (filedName.equalsIgnoreCase("revenue"))
+       "$" + value
+     else
+       value
+   }
+ }
+```
+这份代码来自一个关于推荐和订单的报表系统。
+查询指标时QueryFieldBuilder：对于Order,revenue类型的指标，需要转换成onlineorder和instoreorder
+展示指标时FiledValueFormatter：对revenue需要在前面加上美元符号$。
+
+如果新加入一个指标（利润额）：也需要区分revenue、order 那么需要对这俩个类都进行修改，造成霰弹式修改

@@ -1,0 +1,5 @@
+sales-performance模块有许多类似的报表需要渲染, BaseSalesPerformanceService提供了一些模板方法以及一些hooks
+
+遗憾的是, 这些hooks在BaseSalesPerformanceService中有默认实现, 而这些实现大多数子类并不喜欢, 一般会将其覆盖.
+
+

@@ -1,0 +1,12 @@
+```public Class Person {
+    private String surname;
+    private String firstName;
+    
+    public String getFullName() {
+        String name = "";
+        name = firstName+surname;
+        return name;
+    }
+}
+```
+name is temporary field
